@@ -1,0 +1,34 @@
+[
+    {
+        "label": "Home",
+        "href": "/"
+    },
+    {
+        "label": "Services",
+        "href": "/services"
+    },
+    {
+        "label": "About",
+        "href": "/about"
+    },
+    {
+        "label": "IT Platform",
+        "href": "/it-platform"
+    },
+    {
+        "label": "Online Inquiry",
+        "href": "/inquiry"
+    },
+    {
+        "label": "Booking",
+        "href": "/booking"
+    },
+    {
+        "label": "Careers",
+        "href": "/careers"
+    },
+    {
+        "label": "Contact",
+        "href": "/contact"
+    }
+]
