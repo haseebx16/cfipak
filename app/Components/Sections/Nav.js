@@ -40,7 +40,7 @@ const Nav = () => {
               <img
                 src="/newlogocfi.png"
                 alt="Logo"
-                className="w-auto h-10 sm:h-10 md:h-14 lg:h-16"
+                className="w-auto h-10 sm:h-10 md:h-20 lg:h-24"
               />
               <div className="hidden md:flex ml-8 space-x-8">
                 <div className="text-sm">
