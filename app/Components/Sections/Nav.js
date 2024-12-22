@@ -29,37 +29,114 @@ const Nav = () => {
   };
 
   return (
-    <div className="relative z-50 flex justify-center text-black items-center flex-wrap bg-white">
-      <header
-        className={`${font2.className} w-screen md:w-[85%]  bg-darkGrey bg-opacity-90 py-4 text-black`}
-      >
-        <nav className="flex flex-col items-center justify-between  h-full px-8">
+    <div className="relative">
+      {/* Navbar */}
+      <div className="fixed top-0 left-0 md:w-[80%] w-full z-50 bg-opacity-90 bg-white">
+        <header
+          className={`${font2.className} flex items-center justify-between px-4 py-3 bg-darkGrey`}
+        >
           <Link href="/">
-            <div className="flex items-center justify-between">
-              {/* <p>DB CLONE</p> */}
-              <img src="/newlogocfi.png" alt="Logo" className="w-auto h-10 sm:h-10 md:h-14 lg:h-16" />
-              <div className="flex space-x-4 flex-row">
-                <div className="flex flex-col">
-                    <p className="text-center">Call Us On:</p>
-                    <p className="text-center">1231231231</p>
+            <div className="flex justify-center items-center">
+              <img
+                src="/newlogocfi.png"
+                alt="Logo"
+                className="w-auto h-10 sm:h-10 md:h-14 lg:h-16"
+              />
+              <div className="hidden md:flex ml-8 space-x-8">
+                <div className="text-sm">
+                  <p className="font-medium text-black">Call Us On:</p>
+                  <p className="text-black">1231231231</p>
                 </div>
-                
-                <div className="flex flex-col">
-                    <p className="text-center">Email Us At:</p>
-                    <p className="text-center">info@cfipak.com</p>
-                    </div>
+                <div className="text-sm">
+                  <p className="font-medium text-black">Email Us At:</p>
+                  <p className="text-black">info@cfipak.com</p>
+                </div>
               </div>
             </div>
           </Link>
 
-          {/* Hamburger icon for mobile */}
-          <div className="md:hidden flex items-center">
-            <button onClick={toggleMenu} className="text-black focus:outline-none">
-              {isOpen ? (
+          {/* Hamburger Icon */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden text-white focus:outline-none"
+          >
+            {isOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+        </header>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex justify-center bg-sky-900 p-3">
+          {navLinks.map((item) => (
+            <Link key={item.label} href={item.href}>
+              <motion.span
+                whileHover={{ scale: 1.1 }}
+                className={`${
+                  activeLink === item.href ? "text-cyan-400" : "text-white"
+                } mx-4 cursor-pointer`}
+              >
+                {item.label}
+              </motion.span>
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-100%", opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-sky-900 text-white z-40 flex flex-col items-center justify-center"
+            >
+              {navLinks.map((item) => (
+                <motion.span
+                  key={item.label}
+                  whileHover={{ scale: 1.1 }}
+                  className="py-2 text-lg"
+                >
+                  <Link href={item.href}>{item.label}</Link>
+                </motion.span>
+              ))}
+              <button
+                onClick={toggleMenu}
+                className="absolute top-4 right-4 focus:outline-none"
+              >
                 <svg
                   className="w-6 h-6"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="white"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -70,104 +147,20 @@ const Nav = () => {
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-              ) : (
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
 
-          {/* Mobile Menu */}
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                initial={{ y: "-100%", opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: "-100%", opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="flex flex-col items-center justify-center h-screen fixed inset-0 bg-gradient-to-br from-cyan-400 to-orange-300 z-50 md:hidden"
-              >
-                <div className="absolute top-0 left-0 p-4">
-                  {/* <p>DB CLONE</p> */}
-                  <img src="/newlogocfi.png" alt="Logo" className="w-auto h-10" />
-                </div>
-
-                <div className="absolute top-0 right-0 p-4">
-                  <button onClick={toggleMenu} className="text-black focus:outline-none">
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div>
-
-                <div className="flex flex-col items-center justify-center space-y-0">
-                  {navLinks.map((item) => (
-                    <motion.span
-                      key={item.label}
-                      whileHover={{ scale: 1.05 }}
-                      className={`${
-                        activeLink === item.href ? "border-b-2 border-cyan-900" : ""
-                      } text-black block py-4 font-bold text-xl cursor-pointer`}
-                    >
-                      <Link href={item.href}>{item.label}</Link>
-                    </motion.span>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Desktop Menu */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="hidden md:flex mt-4 text-white w-full bg-sky-900 p-4 items-center justify-between space-x-8"
-          >
-            {navLinks.map((item) => (
-              <div
-                key={item.label}
-                onMouseEnter={item.label === "Our Services" ? handleMouseEnter : null}
-                onMouseLeave={item.label === "Our Services" ? handleMouseLeave : null}
-                className="relative"
-              >
-                <motion.span
-                  whileHover={{ scale: 1.1, originX: 0 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className={`${
-                    activeLink === item.href ? "border-b-2 border-cyan-400" : ""
-                  } block text-md font-medium cursor-pointer hover:border-b-2 hover:border-cyan-400`}
-                >
-                  <Link href={item.href}>{item.label}</Link>
-                </motion.span>
-              </div>
-            ))}
-          </motion.div>
-        </nav>
-      </header>
+      {/* Background Image */}
+      <div>
+        <img
+          src="/slider-1.jpg"
+          alt="Background"
+          className="w-full object-cover"
+        />
+      </div>
     </div>
   );
 };
