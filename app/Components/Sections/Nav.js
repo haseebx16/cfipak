@@ -31,7 +31,7 @@ const Nav = () => {
   return (
     <div className="relative">
       {/* Navbar */}
-      <div className="fixed top-0 left-0 md:w-[80%] w-full z-50 bg-opacity-90 bg-white">
+      <div className=" top-0 left-0  w-full z-50 bg-opacity-90 bg-white">
         <header
           className={`${font2.className} flex items-center justify-between px-4 py-3 bg-darkGrey`}
         >
