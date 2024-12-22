@@ -9,7 +9,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const path = window.location.pathname;
@@ -20,94 +19,100 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleMouseEnter = () => {
-    setDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setDropdownOpen(false);
-  };
-
   return (
     <div className="relative">
+      {/* Background Image with Text Overlay */}
+      <div className="relative">
+        <img
+          src="/slider-1.jpg"
+          alt="Background"
+          className="w-full object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-white text-4xl md:text-6xl font-bold">Welcome to CFI</h1>
+        </div>
+      </div>
+
       {/* Navbar */}
-      <div className=" top-0 left-0  w-full z-50 bg-opacity-90 bg-white">
-        <header
-          className={`${font2.className} flex items-center justify-between px-4 py-3 bg-darkGrey`}
-        >
-          <Link href="/">
-            <div className="flex justify-center items-center">
-              <img
-                src="/newlogocfi.png"
-                alt="Logo"
-                className="w-auto h-10 sm:h-10 md:h-20 lg:h-24"
-              />
-              <div className="hidden md:flex ml-8 space-x-8">
-                <div className="text-sm">
-                  <p className="font-medium text-black">Call Us On:</p>
-                  <p className="text-black">1231231231</p>
-                </div>
-                <div className="text-sm">
-                  <p className="font-medium text-black">Email Us At:</p>
-                  <p className="text-black">info@cfipak.com</p>
-                </div>
+      <div className="absolute top-0 left-0 w-full z-50">
+        <div className="container mx-auto md:w-4/5 bg-opacity-100 bg-white">
+          <header
+            className={`${font2.className} flex items-center justify-between px-4 py-3 bg-darkGrey`}
+          >
+            <Link href="/">
+              <div className="flex items-center">
+                <img
+                  src="/newlogocfi.png"
+                  alt="Logo"
+                  className="w-auto h-10 sm:h-10 md:h-20 lg:h-24"
+                />
+              </div>
+            </Link>
+            <div className="hidden md:flex ml-8 space-x-8">
+              <div className="text-sm">
+                <p className="font-medium text-black">Call Us On:</p>
+                <p className="text-black">1231231231</p>
+              </div>
+              <div className="text-sm">
+                <p className="font-medium text-black">Email Us At:</p>
+                <p className="text-black">info@cfipak.com</p>
               </div>
             </div>
-          </Link>
 
-          {/* Hamburger Icon */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden text-black focus:outline-none"
-          >
-            {isOpen ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
-        </header>
+            {/* Hamburger Icon */}
+            <button
+              onClick={toggleMenu}
+              className="md:hidden text-black focus:outline-none"
+            >
+              {isOpen ? (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
+          </header>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex justify-center bg-sky-900 p-3">
-          {navLinks.map((item) => (
-            <Link key={item.label} href={item.href}>
-              <motion.span
-                whileHover={{ scale: 1.1 }}
-                className={`${
-                  activeLink === item.href ? "text-cyan-400" : "text-white"
-                } mx-4 cursor-pointer`}
-              >
-                {item.label}
-              </motion.span>
-            </Link>
-          ))}
+          {/* Desktop Menu */}
+          <div className="hidden md:flex justify-center bg-sky-900 p-3">
+            {navLinks.map((item) => (
+              <Link key={item.label} href={item.href}>
+                <motion.span
+                  whileHover={{ scale: 1.1 }}
+                  className={`${
+                    activeLink === item.href ? "text-cyan-400" : "text-white"
+                  } mx-4 cursor-pointer`}
+                >
+                  {item.label}
+                </motion.span>
+              </Link>
+            ))}
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -151,15 +156,6 @@ const Nav = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
-
-      {/* Background Image */}
-      <div>
-        <img
-          src="/slider-1.jpg"
-          alt="Background"
-          className="w-full object-cover"
-        />
       </div>
     </div>
   );
