@@ -58,7 +58,7 @@ const Nav = () => {
           {/* Hamburger Icon */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-black focus:outline-none"
           >
             {isOpen ? (
               <svg
