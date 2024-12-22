@@ -11,7 +11,7 @@ const Services = () => {
     'Sea Freight': 'Combined Freight international provides support to its customers, trade and industry in the global exchange of goods.',
     'Air Chartering': 'Reserving a Charter with CFI for your own needs whether it be business or personal helps you to maintain control over schedule and guarantees that you are safely transported from anywhere in to wherever you need to travel.',
     'Rail Transportation': 'We can facilitate Rail Transportation to and from all four provinces in the country whether it be Southern to Northern Pakistan or Easter to Western Pakistan our network of trucks connects the entire country around the clock',
-    'Warehouse': 'CFI can facilitate value added logistics services for catering to any requirements of clients who need to sub-contract their logistic and administrative processes. We have access to and provide to our clients all inclusive warehousing facilities both for importing or exporting cargo. We have the capabilities and facilities to provide the appropriate storage for every type of cargo including food items, chemicals, computer, arts and handicrafts and solid and liquid chemicals.',
+    'Warehouse': 'CFI can facilitate value added logistics services for catering to any requirements of clients who need to sub-contract their logistic and administrative processes. We have access to and provide to our clients all inclusive warehousing facilities both for importing or exporting cargo. We have the capabilities and facilities to provide the appropriate storage for every type of cargo.',
     'Logistics': 'As a leader in specialized transportation, we do more than just deliver high value goods on time. We provide our customer with Strategic Logistics solutions. Our commitment to exceeding all customer expectations drives us to continuously seek ways to save our customers time and money. Our goal, after all, is to help our customers become more competitive in their markets.'
   };
 
@@ -26,7 +26,7 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="flex bg-sky-900 justify-center space-x-8 items-center mt-12">
+      <div className="flex flex-col md:flex-row bg-sky-900 justify-center md:space-x-8 items-center mt-12">
         <div className="flex flex-col space-y-2 p-4">
           {['Air Freight', 'Sea Freight', 'Air Chartering', 'Rail Transportation', 'Warehouse', 'Logistics'].map((service) => (
             <button
@@ -46,8 +46,8 @@ const Services = () => {
             className="w-96 h-72 md:w-[35rem] md:h-96 object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center">
-            <h1 className='text-white text-4xl font-bold pb-4'>{selectedService}</h1>
-            <p className="text-white text-lg md:text-lg font-light md:max-w-md text-center">
+            <h1 className='text-white md:text-4xl text-2xl font-bold pb-4'>{selectedService}</h1>
+            <p className="text-white text-md p-4 md:text-lg font-light md:max-w-md text-center">
               {serviceTexts[selectedService]}
             </p>
           </div>
