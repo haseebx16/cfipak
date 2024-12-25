@@ -17,7 +17,7 @@ const Footer = () => {
     }, [])
 
   return (
-    <div className={`${font2.className} relative w-full h-screen md:h-[25rem] mt-12 bg-black`}>
+    <div className={`${font2.className} relative w-full h-screen md:h-[25rem] mt-12 md:mt-0 bg-black`}>
       <img src={"/warehousing.jpg"} alt="Warehousing" className="absolute inset-0 w-full h-full object-cover opacity-50" />
       <div className="absolute inset-0 bg-black bg-opacity-90"></div>
       <div className="relative z-10 flex flex-col md:flex-row md:flex-wrap items-start md:items-center h-full text-white p-4 md:p-8">
