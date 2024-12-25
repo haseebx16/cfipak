@@ -54,7 +54,7 @@ const ContactForm = () => {
         {/* Right Column */}
         <div style={{ flex: "1 1 45%", minWidth: "300px" }}>
           <textarea
-            placeholder="Your Message.."
+            placeholder="Your Message."
             style={{
               width: "100%",
               height: "120px",
