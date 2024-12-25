@@ -18,7 +18,7 @@ const ContactForm = () => {
         <div style={{ flex: "1 1 45%", minWidth: "300px" }}>
           <input
             type="text"
-            placeholder="Your Full Name.."
+            placeholder="Your Full Name."
             style={{
               width: "100%",
               padding: "0.8rem",
