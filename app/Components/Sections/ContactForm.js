@@ -40,7 +40,7 @@ const ContactForm = () => {
           />
           <input
             type="text"
-            placeholder="Your Subjects."
+            placeholder="Your Subjects.."
             style={{
               width: "100%",
               padding: "0.8rem",
