@@ -32,7 +32,7 @@ const page = () => {
             </div>
             <div className=' flex flex-col justify-start items-start'>
             <div className=' flex flex-col justify-start items-start'>
-                <img src='/air-freight.jpg' alt='air-freight' className='w-[40rem] mt-12 md:mt-0 md:p-8'/>
+                <img src='/air-freight.jpg' alt='air-freight' className='w-[40rem] mt-12 md:mt-0 '/>
             </div>
                 <div>
                     <h1 className='font-bold text-2xl text-left'>1. Matchless Speed</h1>
