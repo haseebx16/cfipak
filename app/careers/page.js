@@ -2,140 +2,117 @@ import React from 'react';
 import Nav from '../Components/Sections/Nav';
 import Footer from '../Components/Sections/Footer';
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
+    <div className="w-full">
       <Nav />
-      <section style={{ padding: "2rem", backgroundColor: "#f9f9f9" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "1.5rem", fontSize: "1.8rem", fontWeight: "bold" }}>APPLY NOW</h2>
-        <form style={{ maxWidth: "1200px", margin: "0 auto", backgroundColor: "#fff", padding: "2rem", borderRadius: "8px", boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)" }}>
+      <section className="px-4 py-10 bg-gray-100">
+        <h2 className="text-center text-2xl font-bold mb-6">APPLY NOW</h2>
+        <form className="w-full bg-white p-8 rounded-lg shadow-md">
           {/* Personal Details */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            {["First Name", "Last Name", "Mobile Number", "Email", "City", "Department", "Gender", "Marital Status", "Date of Birth", "NIC Number", "Position Applied For", "Expected Salary", "How did you hear about this job?", "Address", "Previous Salary"].map((placeholder, index) => (
-              <div key={index} style={{ flex: "1 1 30%", minWidth: "280px" }}>
-                <label style={{ fontWeight: "bold", display: "block", marginBottom: "0.5rem" }}>
-                  {placeholder}:
-                </label>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              "First Name",
+              "Last Name",
+              "Mobile Number",
+              "Email",
+              "City",
+              "Department",
+              "Gender",
+              "Marital Status",
+              "Date of Birth",
+              "NIC Number",
+              "Position Applied For",
+              "Expected Salary",
+              "How did you hear about this job?",
+              "Address",
+              "Previous Salary",
+            ].map((placeholder, index) => (
+              <div key={index}>
+                <label className="block text-sm font-medium mb-2">{placeholder}:</label>
                 <input
                   type="text"
                   placeholder={placeholder}
-                  style={{
-                    width: "100%",
-                    padding: "0.8rem",
-                    border: "1px solid #ddd",
-                    borderRadius: "4px",
-                  }}
+                  className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
                 />
               </div>
             ))}
           </div>
 
           {/* Qualification Section */}
-          <h3 style={{ backgroundColor: "#003d99", color: "#fff", padding: "0.5rem", borderRadius: "4px", marginTop: "2rem" }}>
-            Qualification
-          </h3>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          <h3 className="bg-blue-900 text-white px-4 py-2 rounded mt-6">Qualification</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
             {["Level of Education", "School/Institute", "Passed Year", "Grade/GPA", "Description"].map((placeholder, index) => (
-              <div key={index} style={{ flex: "1 1 30%", minWidth: "280px" }}>
-                <label style={{ fontWeight: "bold", display: "block", marginBottom: "0.5rem" }}>
-                  {placeholder}:
-                </label>
+              <div key={index}>
+                <label className="block text-sm font-medium mb-2">{placeholder}:</label>
                 <input
                   type="text"
                   placeholder={placeholder}
-                  style={{
-                    width: "100%",
-                    padding: "0.8rem",
-                    border: "1px solid #ddd",
-                    borderRadius: "4px",
-                  }}
+                  className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
                 />
               </div>
             ))}
           </div>
 
           {/* Previous Experience */}
-          <h3 style={{ backgroundColor: "#003d99", color: "#fff", padding: "0.5rem", borderRadius: "4px", marginTop: "2rem" }}>
-            Previous Experience
-          </h3>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          <h3 className="bg-blue-900 text-white px-4 py-2 rounded mt-6">Previous Experience</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
             {["From", "To", "Duration", "Position", "Company"].map((placeholder, index) => (
-              <div key={index} style={{ flex: "1 1 30%", minWidth: "280px" }}>
-                <label style={{ fontWeight: "bold", display: "block", marginBottom: "0.5rem" }}>
-                  {placeholder}:
-                </label>
+              <div key={index}>
+                <label className="block text-sm font-medium mb-2">{placeholder}:</label>
                 <input
                   type="text"
                   placeholder={placeholder}
-                  style={{
-                    width: "100%",
-                    padding: "0.8rem",
-                    border: "1px solid #ddd",
-                    borderRadius: "4px",
-                  }}
+                  className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
                 />
               </div>
             ))}
           </div>
 
           {/* Reference Section */}
-          <h3 style={{ backgroundColor: "#003d99", color: "#fff", padding: "0.5rem", borderRadius: "4px", marginTop: "2rem" }}>
-            Reference
-          </h3>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          <h3 className="bg-blue-900 text-white px-4 py-2 rounded mt-6">Reference</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
             {["Name", "Son/Daughter of", "Relation", "Mobile No"].map((placeholder, index) => (
-              <div key={index} style={{ flex: "1 1 30%", minWidth: "280px" }}>
-                <label style={{ fontWeight: "bold", display: "block", marginBottom: "0.5rem" }}>
-                  {placeholder}:
-                </label>
+              <div key={index}>
+                <label className="block text-sm font-medium mb-2">{placeholder}:</label>
                 <input
                   type="text"
                   placeholder={placeholder}
-                  style={{
-                    width: "100%",
-                    padding: "0.8rem",
-                    border: "1px solid #ddd",
-                    borderRadius: "4px",
-                  }}
+                  className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
                 />
               </div>
             ))}
           </div>
 
           {/* Privacy Policy */}
-          <div style={{ marginTop: "2rem", display: "flex", alignItems: "center", gap: "1rem" }}>
-            <input type="checkbox" id="privacy-policy" />
-            <label htmlFor="privacy-policy" style={{ fontWeight: "bold" }}>
-              Privacy Policy Acknowledgment
+          <div className="flex items-start mt-6">
+            <input type="checkbox" id="privacy-policy" className="mr-3 mt-1" />
+            <label htmlFor="privacy-policy" className="text-sm">
+              I hereby certify that the information provided above is true to the best of my knowledge. I understand
+              that I am liable to be terminated from the services of the organization if any information is found to be
+              false or suppressed at any stage.
             </label>
           </div>
 
           {/* Captcha */}
-          <div style={{ marginTop: "2rem", display: "flex", alignItems: "center", gap: "1rem" }}>
-            <input type="text" placeholder="Enter Captcha" style={{ padding: "0.8rem", border: "1px solid #ddd", borderRadius: "4px" }} />
-            <div style={{ backgroundColor: "#ffcc66", padding: "0.8rem", fontWeight: "bold" }}>
-              79F4B6
-            </div>
+          <div className="flex items-center gap-6 mt-6">
+            <input
+              type="text"
+              placeholder="Enter Captcha"
+              className="w-1/3 p-3 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
+            />
+            <div className="bg-yellow-300 text-black font-bold py-2 px-4 rounded">79F4B6</div>
           </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            style={{
-              marginTop: "2rem",
-              width: "100%",
-              padding: "1rem",
-              backgroundColor: "#003d99",
-              color: "#fff",
-              border: "none",
-              borderRadius: "4px",
-              fontWeight: "bold",
-              fontSize: "1.2rem",
-              cursor: "pointer",
-            }}
-          >
-            Save
-          </button>
+          {/* Save Button */}
+          <div className="mt-6 text-right">
+            <button
+              type="submit"
+              className="bg-blue-900 text-white py-2 px-8 rounded hover:bg-blue-700 transition-all"
+            >
+              Save
+            </button>
+          </div>
         </form>
       </section>
       <Footer />
@@ -143,4 +120,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
