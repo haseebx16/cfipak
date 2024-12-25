@@ -29,7 +29,7 @@ const ContactForm = () => {
           />
           <input
             type="email"
-            placeholder="Your Email.."
+            placeholder="Your Email."
             style={{
               width: "100%",
               padding: "0.8rem",
