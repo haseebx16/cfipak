@@ -5,10 +5,13 @@ import navLinks from "../data/navLinks";
 import { font2 } from "../font/poppins";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
 
   useEffect(() => {
     const path = window.location.pathname;
@@ -17,6 +20,18 @@ const Nav = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleMouseEnter = (index) => {
+    setDropdownOpen(index);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(null);
+  };
+
+  const toggleMobileDropdown = (index) => {
+    setMobileDropdownOpen(mobileDropdownOpen === index ? null : index);
   };
 
   return (
@@ -100,17 +115,36 @@ const Nav = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex justify-center bg-sky-900 p-3">
-            {navLinks.map((item) => (
-              <Link key={item.label} href={item.href}>
-                <motion.span
-                  whileHover={{ scale: 1.1 }}
-                  className={`${
-                    activeLink === item.href ? "text-cyan-400" : "text-white"
-                  } mx-4 cursor-pointer`}
-                >
-                  {item.label}
-                </motion.span>
-              </Link>
+            {navLinks.map((item, index) => (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link href={item.href}>
+                  <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    className={`${
+                      activeLink === item.href ? "text-cyan-400" : "text-white"
+                    } mx-4 cursor-pointer flex items-center`}
+                  >
+                    {item.label}
+                    {item.subLinks && <FaChevronDown className="ml-2" />}
+                  </motion.span>
+                </Link>
+                {item.subLinks && dropdownOpen === index && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+                    {item.subLinks.map((subItem) => (
+                      <Link key={subItem.label} href={subItem.href}>
+                        <span className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                          {subItem.label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -125,14 +159,28 @@ const Nav = () => {
               transition={{ duration: 0.3 }}
               className="fixed inset-0 bg-sky-900 text-white z-40 flex flex-col items-center justify-center"
             >
-              {navLinks.map((item) => (
-                <motion.span
-                  key={item.label}
-                  whileHover={{ scale: 1.1 }}
-                  className="py-2 text-lg"
-                >
-                  <Link href={item.href}>{item.label}</Link>
-                </motion.span>
+              {navLinks.map((item, index) => (
+                <div key={item.label} className="relative">
+                  <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    className="py-2 text-lg flex items-center"
+                    onClick={() => item.subLinks && toggleMobileDropdown(index)}
+                  >
+                    <Link href={item.href}>{item.label}</Link>
+                    {item.subLinks && <FaChevronDown className="ml-2" />}
+                  </motion.span>
+                  {item.subLinks && mobileDropdownOpen === index && (
+                    <div className="mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+                      {item.subLinks.map((subItem) => (
+                        <Link key={subItem.label} href={subItem.href}>
+                          <span className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                            {subItem.label}
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <button
                 onClick={toggleMenu}

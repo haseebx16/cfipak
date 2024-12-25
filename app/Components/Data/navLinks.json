@@ -5,7 +5,17 @@
     },
     {
         "label": "Services",
-        "href": "/services"
+        "href": "",
+        "subLinks": [
+            { "label": "Air Freight", "href": "/services/air-freight" },
+            { "label": "Sea Freight", "href": "/services/sea-freight" },
+            { "label": "Road Freight", "href": "/services/road-freight" },
+            { "label": "Rail Freight", "href": "/services/rail-freight" },
+            { "label": "Warehousing", "href": "/services/warehousing" },
+            { "label": "Custom Clearance", "href": "/services/custom-clearance" },
+            { "label": "Logistics", "href": "/services/logistics" },
+            { "label": "Supply Chain", "href": "/services/supply-chain" }
+        ]
     },
     {
         "label": "About",
