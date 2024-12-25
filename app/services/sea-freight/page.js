@@ -10,25 +10,27 @@ const page = () => {
         <div className='flex p-8 md:p-8 flex-col md:flex-row justify-center items-center bg-white'>
             <div className='md:w-1/2 flex flex-col justify-center items-center'> 
                     <h1 className='text-4xl font-bold text-left'>Sea Freight Services In Pakistan</h1>
-                <p className='text-gray-500 text-md mt-4 max-w-xl'>CFI is among the foremost providers in Pakistan of air logistics services that offers wide-ranging and all-inclusive solutions and also provides exclusive carrying solutions to inaccessible areas. Customers have come to trust and depend upon us as their reliable source of transport logistics.
-                    Air freight is among the essential requirements and important element for the domestic and international logistics network. Over the years we have established relations with the industry partners and successfully providing the cost effective rates.</p>
-                <h2 className='text-2xl font-bold mt-4'>Transporting Your Goods via Air Freight Services</h2>
-                <div>
-                    <p className='text-gray-500 max-w-xl mt-4 text-sm'>Air Freight means moving goods which have to be transported via a plane and can refer to huge and bulky air cargo and even air mail. Air Freight proves highly beneficial if you need to get your goods or property transported quickly from one place to another. The main reason that people choose this particular service is that it offers you speedy delivery and several other benefits.</p>
-                    <p className='text-gray-500 max-w-xl mt-4 text-sm'>Combined Freight International Pakistan is one of the best services available in the domain of Air Freight Services. We offer you complete Air Freight and Air Logistics solutions and benefits so that you can get the quality service you are looking for. Other than that, we even offer you complete Logistics services and act as your <a href='/services/logistics'><span className='text-yellow-500'>Logistics service provider</span></a> in Pakistan.</p>
-                    <p className='text-gray-500 max-w-xl mt-4 text-sm'>Are you thinking about why you should choose our services? The best qualities of CFIPAK are that:</p>
-                    <p className='text-gray-500 max-w-xl mt-4 text-sm'>&#x2022;&nbsp;We provide services in miscellaneous cities of Pakistan which include Karachi, Lahore, Islamabad, Faisalabad and many more.</p>
+                <p className='text-gray-500 text-sm mt-4 max-w-xl'>Combined Freight international provides support to its customers, trade and industry in the global exchange of goods.</p>
+                <p className='text-gray-500 text-sm mt-4 max-w-xl'>Our company has the best relations with all major carriers and a large assortment of value added services for ascertaining that every delivery requirement is carried out satisfactorily. With long term and excellent business relationship with every major shipping line all over the world we assure you that we are the best company to handle your cargo at all ports on 6 continents, with the best freight rates and the fastest travel time.</p>
+                <h2 className='text-2xl font-bold mt-4'>Choosing a Sea Freight Company in Pakistan</h2>
+                <div className='flex flex-col justify-center items-center'>
+                    <p className='text-gray-500 max-w-xl mt-4 text-sm'>Sea freight is known as one of the best methods for transporting your materials and merchandise especially if they are in bulk and need to be transported safely. You can transport bulk materials weighing up to thousands of tons without having to spend so much money. Sea freight transportation is favoured for being perhaps the most cost-efficient transportation method.</p>
+                    <p className='text-gray-500 max-w-xl mt-4 text-sm'>In a country like Pakistan where you have a lot of import and export businesses going on, sea freight transportation plays a very important role in being the best mode of transportation. Companies and businesses in Pakistan do like to hire some sea freight company in Pakistan so that they can get their materials and other products shipped to different parts of the world easily.</p>
+                    <p className='text-gray-500 max-w-xl mt-4 text-sm'>The shipping business is one of the most dominant businesses in the whole of Pakistan, especially in the city of Karachi. Combined Freight International or CFIPAK is also one freight forwarding company which is also a Non-Operational Vessel Carrier or NVOCC in Pakistan. Therefore, we deal in all shipping and vessel related domains</p>
+                    <p className='text-gray-500 max-w-xl mt-4 text-sm'>The main points that give us leverage over regular sea freight companies are such that:</p>
+                    <div>
                     <p className='text-gray-500 max-w-xl mt-1 text-sm'>&#x2022;&nbsp;We have an established network with the top freight companies worldwide.</p>
                     <p className='text-gray-500 max-w-xl mt-1 text-sm'>&#x2022;&nbsp;We offer you more than just one mode of freight transportation.</p>
                     <p className='text-gray-500 max-w-xl mt-1 text-sm'>&#x2022;&nbsp;We have references and contacts to help execute every process efficiently.</p>
                     <p className='text-gray-500 max-w-xl mt-1 text-sm'>&#x2022;&nbsp;We have an experience of around two decades in the field of freight forwarding.</p>
                     <p className='text-gray-500 max-w-xl mt-1 text-sm'>&#x2022;&nbsp;We offer you cost-effective rates which are just within your budget.</p>
                     <p className='text-gray-500 max-w-xl mt-1 text-sm'>&#x2022;&nbsp;We guarantee to deliver you what we promise.</p>
+                    </div>
                     <p className='text-gray-500 max-w-xl mt-8 text-sm'>Choosing CFIPAK will definitely benefit you in one way or the other. Now there are many Air Freight companies in Pakistan which makes it confusing for you to choose from. But we are sure that once you have partnered with us, you will definitely remember us for any kind of Air Logistics or Air Freight services you will need in the future.</p>
-                <h1 className='mt-4 text-2xl font-bold'>Opt for Air Logistics Services Today!</h1>
+                <h1 className='mt-4 text-2xl max-w-xl font-bold'>Hire a Sea Freight Company in Karachi for Your Benefit</h1>
                 </div>
-                <p className='text-gray-500 max-w-xl mt-1 text-sm'>Air Freight Services offer you a great deal of advantages over regular transport services which you can take from Combined Freight International Pakistan as well. Our services are designed to benefit you the customer.</p>
-                <p className='text-gray-500 max-w-xl mt-1 text-sm'>Check out what benefits our Air freight and Air Logistics services offer you over other kinds of Freight Transportation services:</p>
+                <p className='text-gray-500 max-w-xl mt-1 text-sm'>Karachi is the main sea port city in Pakistan, and there are many companies in the city which deal in the shipping and freight forwarding business. There are many benefits that you can get from hiring CFIPAK as your trusted Sea Freight Company in Karachi and in Pakistan. Some of these benefits are listed below:</p>
+                {/* <p className='text-gray-500 max-w-xl mt-1 text-sm'>Check out what benefits our Air freight and Air Logistics services offer you over other kinds of Freight Transportation services:</p> */}
             </div>
             <div className=' flex flex-col justify-start items-start'>
             <div className=' flex flex-col justify-start items-start'>
