@@ -9,6 +9,19 @@ const page = () => {
   return (
     <div className={`${font2.className}`}>
       <Nav />
+      <div className="relative">
+            <img
+            src="/contact-banner.jpg"
+            alt="Background"
+            className="w-full object-cover h-[500px] md:h-[500px]"
+            />
+            <div className="absolute bg-black bg-opacity-70 inset-0 flex flex-col items-center justify-center">
+                <div className="flex flex-col w-[70%]">
+                    <h1 className="text-white md:mt-12 text-2xl md:text-4xl font-bold">CONTACT US FOR ANY QUERY</h1>
+                    <p className="text-white max-w-xl text-sm md:text-xl mt-4">You can contact us via email or phone call for any queries. It will be a pleasure to assist you and resolve your queries for the concerned matter</p>
+                </div>
+            </div>
+        </div>
       <section style={{ padding: "2rem", backgroundColor: "#f9f9f9" }}>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around", gap: "2rem" }}>
           {/* Map Section */}

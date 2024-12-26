@@ -6,6 +6,21 @@ const Page = () => {
   return (
     <div className="w-full">
       <Nav />
+      <div className="relative">
+            <img
+            src="/career.jpg"
+            alt="Background"
+            className="w-full object-cover h-[500px] md:h-[500px]"
+            />
+            <div className="absolute bg-black bg-opacity-70 inset-0 flex flex-col items-center justify-center">
+                <div className="flex flex-col w-[70%]">
+                    <h1 className="text-white md:mt-12 text-2xl md:text-4xl font-bold">CAREERS</h1>
+                    <p className="text-white max-w-xl text-sm md:text-xl mt-4">You can apply online by entering below details.
+
+</p>
+                </div>
+            </div>
+        </div>
       <section className="px-4 py-10 bg-gray-100">
         <h2 className="text-center text-2xl md:text-5xl font-bold mb-6">APPLY NOW</h2>
         <form className="w-full bg-white p-8 rounded-lg shadow-md">

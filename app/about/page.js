@@ -19,6 +19,19 @@ const page = () => {
   return (
     <>
         <Nav/>
+        <div className="relative">
+            <img
+            src="/about-banner.jpg"
+            alt="Background"
+            className="w-full object-cover h-[500px] md:h-[500px]"
+            />
+            <div className="absolute bg-black bg-opacity-70 inset-0 flex flex-col items-center justify-center">
+                <div className="flex flex-col w-[70%]">
+                    <h1 className="text-white md:mt-12 text-2xl md:text-4xl font-bold">CUSTOMIZED SEA FREIGHT SOLUTIONS</h1>
+                    <p className="text-white max-w-xl text-sm md:text-xl mt-4">We take care of all logistics procedures with considering the optimum transport carriers and ensuring safe packaging for sea transport</p>
+                </div>
+            </div>
+        </div>
         <div>
             <div className='flex justify-center items-center flex-col m-5'>
                 <div className='flex justify-center items-center flex-col md:flex-row mb-5'>

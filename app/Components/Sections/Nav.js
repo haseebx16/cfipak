@@ -26,7 +26,7 @@ const Nav = () => {
 
   return (
     <div className="absolute top-0 left-0 w-full z-50">
-      <div className="container mx-auto md:w-4/5 bg-opacity-100 bg-white">
+      <div className="container mx-auto md:w-[70%] bg-opacity-100 bg-white">
         <header
           className={`${font2.className} flex items-center justify-between px-4 py-3 bg-darkGrey`}
         >
@@ -41,12 +41,12 @@ const Nav = () => {
           </Link>
           <div className="hidden md:flex ml-8 space-x-8">
             <div className="text-sm">
-              <p className="font-medium text-black">Call Us On:</p>
-              <p className="text-black">1231231231</p>
+              <p className="font-medium text-md text-black">Call Us On:</p>
+              <p className="text-black text-xl">UAN +92-21-111-000-234 (CFI)</p>
             </div>
             <div className="text-sm">
-              <p className="font-medium text-black">Email Us At:</p>
-              <p className="text-black">info@cfipak.com</p>
+              <p className="font-medium text-md text-black">Email Us At:</p>
+              <p className="text-black text-xl">info@cfipak.com</p>
             </div>
           </div>
 
@@ -90,7 +90,7 @@ const Nav = () => {
         </header>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex justify-center bg-sky-900 p-3">
+        <div className="hidden md:flex justify-evenly bg-sky-900 p-3">
           {navLinks.map((item, index) => (
             <div
               key={item.label}

@@ -7,18 +7,18 @@ const Hero = () => {
   const slides = [
     {
       image: "/slider-1.jpg",
-      heading: "Welcome to CFI",
-      text: "Empowering Businesses with Innovation",
+      heading: "THE BEST EVER TRANSPORT",
+      text: "Combined Freight International strives to deliver your cargo faster than any other company and in good condition",
     },
     {
       image: "/slider-2.jpg",
-      heading: "Your Trusted Partner",
-      text: "We Deliver Quality and Excellence",
+      heading: "FLY HIGH AT LOW COST",
+      text: "We take responsibility of delivery and being leaders in the logistics sector. We receive and send shipments safely on time to the destination",
     },
     {
       image: "/slider-3.jpg",
-      heading: "Achieve More with Us",
-      text: "Innovative Solutions for Modern Challenges",
+      heading: "MAXIMIZING SAFETY & REDUCING LOGISTICAL RISK",
+      text: "Minimize the operational cost through our warehousing services with integrated supply chain solution and make the most from your business",
     },
   ];
 
@@ -43,10 +43,12 @@ const Hero = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center">
-              <h1 className="text-white text-4xl md:text-6xl font-bold">
-                {slide.heading}
-              </h1>
-              <p className="text-white text-lg md:text-2xl mt-4">{slide.text}</p>
+              <div className="flex flex-col w-[70%]">
+                <h1 className="text-white md:mt-12 max-w-xl text-2xl md:text-4xl font-bold">
+                  {slide.heading}
+                </h1>
+                <p className="text-white max-w-xl text-sm md:text-xl mt-4">{slide.text}</p>
+              </div>
             </div>
           </div>
         ))}

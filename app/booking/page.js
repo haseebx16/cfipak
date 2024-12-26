@@ -19,6 +19,19 @@ const Inquiry = () => {
   return (
     <>
       <Nav />
+      <div className="relative">
+            <img
+            src="/boooking-banner.jpg"
+            alt="Background"
+            className="w-full object-cover h-[500px] md:h-[500px]"
+            />
+            <div className="absolute bg-black bg-opacity-70 inset-0 flex flex-col items-center justify-center">
+                <div className="flex flex-col w-[70%]">
+                    <h1 className="text-white md:mt-12 text-2xl md:text-4xl font-bold">CONVENIENT COMPANY’S FREIGHT BOOKING FORM</h1>
+                    <p className="text-white max-w-xl text-sm md:text-xl mt-4">We provide convenience to the customers by providing form on the website to record the details regarding the packages, commodity and contact number</p>
+                </div>
+            </div>
+        </div>
       <div className="flex flex-col md:flex-row items-center justify-center h-screen md:h-[40rem] bg-white p-4">
         {/* Form Section */}
         <div className="w-full md:w-[40%] p-4">

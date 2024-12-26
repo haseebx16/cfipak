@@ -6,6 +6,7 @@ import { font2 } from '../font/poppins';
 import { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from 'next/link';
 
 const Footer = () => {
 
@@ -27,21 +28,21 @@ const Footer = () => {
         </div>
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
           <h1 data-aos="fade-down" className="text-2xl md:text-4xl mb-2 mt-8 md:mt-0">Quick Links</h1>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Home</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;About</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Services</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Online Inquiry</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Booking Form</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Contact</p>
+          <Link href="/"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Home</p></Link>
+          <Link href="/about"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;About</p></Link>
+          <p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Services</p>
+          <Link href="/inquiry"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Online Inquiry</p></Link>
+          <Link href="/booking"> <p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Booking Form</p> </Link>
+          <Link href="/contact"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Contact</p></Link>
         </div>
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
           <h1 data-aos="fade-down" className="text-2xl md:text-4xl mb-2 mt-2 md:mt-0">Our Services</h1>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Air Freight</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Air Chartering</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Sea Freight</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Warehousing</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Logistics</p>
-          <p data-aos="fade-right" className='text-md'>&#x2022;&nbsp;Custom Clearance</p>
+          <Link href="/services/air-freight"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Air Freight</p></Link>
+          <Link href="/services/air-chartering"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Air Chartering</p></Link>
+          <Link href="/services/sea-freight"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Sea Freight</p></Link>
+          <Link href="/services/warehousing"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Warehousing</p></Link>
+          <Link href="/services/logistics"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Logistics</p></Link>
+          <Link href="/services/custom-clearance"><p data-aos="fade-right" className='text-md cursor-pointer hover:underline'>&#x2022;&nbsp;Custom Clearance</p></Link>
         </div>
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
           <h1 data-aos="fade-up" className="text-2xl md:text-4xl mb-2 mt-2 md:mt-0">Subscribe</h1>
