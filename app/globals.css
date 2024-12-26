@@ -1,11 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -19,3 +23,17 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Add to your global CSS */
+.hero-section {
+  margin-top: 0; /* Ensure it starts at the top */
+  position: relative;
+  z-index: 1; /* Lower than navbar */
+}
+
+.navbar {
+  position: absolute;
+  z-index: 50; /* Higher than hero */
+  width: 100%;
+}
+
