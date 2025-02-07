@@ -110,7 +110,7 @@ const Nav = () => {
                 </motion.span>
               </Link>
               {item.subLinks && dropdownOpen === index && (
-                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg" style={{zIndex: 1000}}>
                   {item.subLinks.map((subItem) => (
                     <Link key={subItem.label} href={subItem.href}>
                       <span className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
